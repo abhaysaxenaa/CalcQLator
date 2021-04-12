@@ -13,12 +13,12 @@ const Layout = (props) => {
                 try {
                     res = eval(input)
                 } catch(err) {
-                    setResult('Math error')
+                    setResult('Error')
                 }
                 if (res === undefined){
-                    setResult('Math error')
+                    setResult('Error')
                 } else {
-                    setResult(input + '=')
+                    setResult(input + ' =')
                     setInput(res)
                 }
             }
@@ -41,7 +41,7 @@ const Layout = (props) => {
     }
     return (
         <div className='frame'>
-            <h2>ReactJS Calculator</h2>
+            <h2>Calc-Q-lator</h2>
             <div className='calculator'>
                 <br></br>
                 <Screen user={input} answer={result}/>
